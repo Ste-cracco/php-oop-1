@@ -40,28 +40,25 @@ $django = new Film(02, 'Django', 'EN-us', 1996, 4.1);
 
 var_dump($titanic);
 
-foreach($titanic as $film) {
-    echo $film, '---';
-}
-
-foreach($django as $film) {
-    echo $film, '---';
-}
-
 ?>
 
 <ul>
-    <?php
-        foreach($titanic as $film) {
-            ?>
-                <li> 
-                    <p> <?= $film['id'] ?> </p> 
-                    <p> <?= $film['titolo'] ?> </p> 
-                    <p> <?= $film['lingua'] ?> </p> 
-                    <p> <?= $film['anno'] ?> </p> 
-                    <p> <?= $film['voto'] ?> </p>             
-                </li>
-            <?php
-        }
-    ?>    
+    <li>
+        <?php
+            foreach($titanic as $film) {
+                ?>
+                    <span> <?= $film ?> </span>        
+                <?php
+            }
+        ?>    
+    </li>
+    <li>
+        <?php
+            foreach($django as $film) {
+                ?>
+                    <span> <?= $film ?> </span>        
+                <?php
+            }
+        ?>    
+    </li>
 </ul>
